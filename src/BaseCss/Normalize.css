@@ -84,7 +84,6 @@ a {
 
 abbr[title] {
     border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2-提交修改 */
     text-decoration: underline dotted; /* 2-提交修改 */
 }
 
