@@ -1,0 +1,105 @@
+@import "../../BaseCss/base_css.css";
+@import "//at.alicdn.com/t/c/font_4614181_qsj1jnt2z39.css";
+div#nav-bar {
+  height: 140px;
+  width: 100%;
+  background-color: white;
+}
+div#nav-bar .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div#nav-bar .content .top {
+  width: 100%;
+  height: 56px;
+  display: flex;
+}
+div#nav-bar .content .top > .left {
+  height: 100%;
+  flex: 8;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+div#nav-bar .content .top > .left .ykt-logo {
+  display: block;
+  width: 140px;
+  height: 26px;
+  background-image: url('../../assets/images/ykt-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+div#nav-bar .content .top > .left .ykt-logo h1 {
+  font-size: 0;
+}
+div#nav-bar .content .top > .middle {
+  height: 100%;
+  flex: 31;
+  display: flex;
+  align-items: center;
+}
+div#nav-bar .content .top > .middle .search-bar {
+  width: 600px;
+  height: 38px;
+  margin-left: 5px;
+  background-color: transparent;
+  border: 1px solid #ff3f29;
+  border-radius: 6px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+}
+div#nav-bar .content .top > .middle .search-bar .category {
+  height: 100%;
+  background-color: green;
+  flex: 13;
+}
+div#nav-bar .content .top > .middle .search-bar .category select {
+  height: 38px;
+  width: 100%;
+  color: #333333;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+div#nav-bar .content .top > .middle .search-bar .keyword {
+  height: 100%;
+  flex: 95;
+}
+div#nav-bar .content .top > .middle .search-bar .keyword input {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #AAAAAA;
+}
+div#nav-bar .content .top > .middle .search-bar .submit-btn {
+  height: 100%;
+  flex: 12;
+}
+div#nav-bar .content .top > .middle .search-bar .submit-btn input {
+  width: 100%;
+  height: 100%;
+  background-color: #ff3f29;
+  border: none;
+  color: white;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+div#nav-bar .content .top > .right {
+  height: 100%;
+  background-color: blueviolet;
+  flex: 21;
+}
+div#nav-bar .content .bottom {
+  width: 100%;
+  background-color: aquamarine;
+  flex: 1;
+}
+/*# sourceMappingURL=index.css.map */
