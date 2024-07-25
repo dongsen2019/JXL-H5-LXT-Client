@@ -1,4 +1,7 @@
 @import "../../BaseCss/base_css.css";
+body {
+  background-color: #f6f6f6;
+}
 div#nav-bar {
   height: 140px;
   width: 100%;
@@ -93,8 +96,64 @@ div#nav-bar .content .top > .middle .search-bar .submit-btn input {
 }
 div#nav-bar .content .top > .right {
   height: 100%;
-  background-color: blueviolet;
   flex: 21;
+  display: flex;
+  justify-content: flex-end;
+}
+div#nav-bar .content .top > .right .inner {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+div#nav-bar .content .top > .right .inner .yhgl {
+  width: fit-content;
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+div#nav-bar .content .top > .right .inner .yhgl span {
+  font-size: 14px;
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+}
+div#nav-bar .content .top > .right .inner .yhgl div.touxiang {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+div#nav-bar .content .top > .right .inner .yhgl div.touxiang:hover .zky {
+  display: block;
+}
+div#nav-bar .content .top > .right .inner .yhgl div.touxiang img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+div#nav-bar .content .top > .right .inner .yhgl div.touxiang .zky {
+  width: 175px;
+  height: 290px;
+  background-color: #ffffff;
+  border: 2px solid #f6f6f6;
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: 0;
+}
+div#nav-bar .content .top > .right .inner .yhgl div.touxiang .zky::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #f6f6f6;
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  right: 6px;
 }
 div#nav-bar .content .bottom {
   width: 100%;

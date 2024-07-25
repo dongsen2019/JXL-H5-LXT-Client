@@ -1,6 +1,10 @@
 @import "../../BaseCss/base_css.css";
 @import "../../config/color.less";
 
+body {
+  background-color: rgb(246, 246, 246);
+}
+
 div#nav-bar {
   height: 140px;
   width: 100%;
@@ -116,9 +120,84 @@ div#nav-bar {
       }
       &>.right {
         height: 100%;
-        background-color: blueviolet;
+        //background-color: blueviolet;
 
         flex: 21;
+        display: flex;
+        justify-content: flex-end;
+
+        .inner {
+          width: fit-content;
+          height: 100%;
+          //background-color: coral;
+
+          display: flex;
+          align-items: center;
+
+          .yhgl {
+            width: fit-content;
+            height: 32px;
+            //background-color: green;
+
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 14px;
+                margin: 0 20px 0 20px;
+                cursor: pointer;
+            }
+
+            div.touxiang  {
+              width: 32px;
+              height: 32px;
+              background-color: transparent;
+              border-radius: 50%;
+
+              position: relative;
+              cursor: pointer;
+
+
+              &:hover .zky {
+                display: block;
+              }
+
+              img {
+                width: 32px;
+                height: 32px;
+                vertical-align: middle;
+                border-radius: 50%;
+              }
+
+              .zky {
+                width: 175px;
+                height: 290px;
+                background-color: #ffffff;
+                border: 2px solid rgb(246,246,246);
+
+                display: none;
+
+                position: absolute;
+                top: 42px;
+                right: 0;
+
+                &::before {
+                  content: "";
+                  width: 0;
+                  height: 0;
+                  border: 10px solid transparent;
+                  border-bottom-color: rgb(246,246,246);
+
+                  display: inline-block;
+
+                  position: absolute;
+                  top: -20px;
+                  right: 6px;
+                }
+              }
+            }
+          }
+        }
       }
     }
     .bottom {
