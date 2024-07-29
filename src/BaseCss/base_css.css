@@ -1,7 +1,12 @@
 @import "Normalize.css";
-@import "//at.alicdn.com/t/c/font_4614181_qsj1jnt2z39.css";
+@import "//at.alicdn.com/t/c/font_4614181_s3xbqjme98o.css";
 .bx {
   width: 1200px;
   margin: 0 auto;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 /*# sourceMappingURL=base_css.css.map */
