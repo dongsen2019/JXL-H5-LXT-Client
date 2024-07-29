@@ -201,13 +201,7 @@ div#nav-bar .content .bottom .left ul li {
   width: fit-content;
   height: 100%;
   margin-left: 30px;
-}
-div#nav-bar .content .bottom .left ul li.current {
-  border-bottom: 5px solid #ff3f29;
-}
-div#nav-bar .content .bottom .left ul li:hover {
-  color: #ff3f29;
-  border-bottom: 5px solid #ff3f29;
+  box-sizing: border-box;
 }
 div#nav-bar .content .bottom .left ul li a {
   width: fit-content;
@@ -216,10 +210,55 @@ div#nav-bar .content .bottom .left ul li a {
   line-height: 44px;
   color: black;
   font-size: 18px;
+  font-family: "微软雅黑", sans-serif;
+}
+div#nav-bar .content .bottom .left ul li.current {
+  border-bottom: 5px solid #ff3f29;
+}
+div#nav-bar .content .bottom .left ul li.current a {
+  color: #ff3f29;
+}
+div#nav-bar .content .bottom .left ul li:hover {
+  border-bottom: 5px solid #ff3f29;
+}
+div#nav-bar .content .bottom .left ul li:hover a {
+  color: #ff3f29;
 }
 div#nav-bar .content .bottom .right {
   width: 50%;
   height: 100%;
-  background-color: blueviolet;
+}
+div#nav-bar .content .bottom .right ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+div#nav-bar .content .bottom .right ul li {
+  width: fit-content;
+  height: 100%;
+  margin-left: 35px;
+  line-height: 44px;
+  color: #AAAAAA;
+  position: relative;
+}
+div#nav-bar .content .bottom .right ul li .ad-pane {
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  border: 1px solid #AAAAAA;
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../assets/images/ewm.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: none;
+}
+div#nav-bar .content .bottom .right ul li:hover .ad-pane {
+  display: block;
 }
 /*# sourceMappingURL=index.css.map */
