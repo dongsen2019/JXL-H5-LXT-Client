@@ -259,6 +259,18 @@ div#nav-bar .content .bottom .right ul li .ad-pane {
   background-position: center center;
   display: none;
 }
+div#nav-bar .content .bottom .right ul li .ad-pane::before {
+  width: 0;
+  height: 0;
+  content: "";
+  display: block;
+  border: 10px solid transparent;
+  border-bottom-color: #AAAAAA;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 div#nav-bar .content .bottom .right ul li:hover .ad-pane {
   display: block;
 }

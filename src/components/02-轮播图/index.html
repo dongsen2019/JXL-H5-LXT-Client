@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>02-轮播图</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="wyy-lb">
+<!--        放置图片-->
+        <ul class="images">
+                <li class="current"><a class="lb-bgc" href="#"><img src="../../assets/images/banner1.png" alt=""></a></li>
+                <li><a class="lb-bgc" href="#"><img src="../../assets/images/banner2.jpg" alt=""></a></li>
+                <li><a class="lb-bgc" href="#"><img src="../../assets/images/banner3.png" alt=""></a></li>
+                <li><a class="lb-bgc" href="#"><img src="" alt=""></a></li>
+                <li><a class="lb-bgc" href="#"><img src="" alt=""></a></li>
+                <li><a class="lb-bgc" href="#"><img src="" alt=""></a></li>
+        </ul>
+
+<!--        放置标题-->
+        <ul class="titles">
+            <ul>
+                <li class="current"><a href="#">标题biaoti-1</a></li>
+                <li><a href="#">标题biaoti-2</a></li>
+                <li><a href="#">标题biaoti-3</a></li>
+                <li><a href="#">标题biaoti-4</a></li>
+                <li><a href="#">标题biaoti-5</a></li>
+                <li><a href="#">标题biaoti-6</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <script src="grade.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
+            /*
+                A NodeList of all your image containers (Or a single Node).
+                The library will locate an <img /> within each
+                container to create the gradient from.
+             */
+            Grade(document.querySelectorAll('.lb-bgc'))
+        })
+    </script>
+
+    <script>
+        //轮播图的js代码
+        let currentIndex = 0
+
+        let images = document.querySelectorAll(".wyy-lb .images li")
+        let titles = document.querySelectorAll(".wyy-lb .titles li")
+
+        for (let i = 0; i < images.length; i++) {
+            titles[i].onmousemove = function () {
+                images[currentIndex].className = ""
+                images[i].className = "current"
+
+                titles[currentIndex].className = ""
+                titles[i].className = "current"
+
+                currentIndex = i
+            }
+        }
+    </script>
+</body>
+</html>
+
