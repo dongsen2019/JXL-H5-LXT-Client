@@ -19,10 +19,14 @@
       background-color: tomato;
 
       position: absolute;
-      display: none;
+
+      transition: opacity 1s linear;
+      opacity: 0;
+      //display: none;
 
       &.current {
-        display: block;
+        //display: block;
+        opacity: 1;
       }
 
       a {
