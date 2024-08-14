@@ -1,0 +1,36 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.news-card {
+  width: 500px;
+  //height: 100px;
+  //background-color: tomato;
+  line-height: 36px;
+  padding: 5px 10px;
+
+  //box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.1);
+
+  ul {
+    li {
+      display: flex;
+      justify-content: space-between;
+      a {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        color: #333;
+
+        &:hover {
+          color: @themeColor;
+        }
+      }
+      span {
+        min-width: 180px;
+        margin-left: 10px;
+        font-size: 14px;
+        color: #999;
+      }
+    }
+  }
+}

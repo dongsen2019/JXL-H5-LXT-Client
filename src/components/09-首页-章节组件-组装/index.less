@@ -3,10 +3,10 @@
 
 .section {
   //height: 200px;
-  background-color: tomato;
+  //background-color: tomato;
   .title-bar {
     height: 32px;
-    background-color: darkcyan;
+    //background-color: darkcyan;
 
     position: relative;
     .title {
@@ -36,6 +36,41 @@
     justify-content: flex-start;
 
     margin-top: 15px;
+
+    .news-card {
+      width: 500px;
+      //height: 100px;
+      //background-color: tomato;
+      line-height: 36px;
+      padding: 5px 10px;
+      box-sizing: border-box;
+
+      box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.1);
+
+      ul {
+        li {
+          display: flex;
+          justify-content: space-between;
+          a {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            color: #333;
+
+            &:hover {
+              color: @themeColor;
+            }
+          }
+          span {
+            min-width: 180px;
+            margin-left: 10px;
+            font-size: 14px;
+            color: #999;
+          }
+        }
+      }
+    }
 
     // 额外定义一些特殊的类名,给使用组件容器的开发人员来使用
     // 类名 -> 各个卡片组件上面
