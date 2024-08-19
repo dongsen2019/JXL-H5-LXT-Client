@@ -1,0 +1,50 @@
+@import "../../BaseCss/base_css.css";
+.teacher-card {
+  width: 370px;
+  height: 165px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+}
+.teacher-card .pic {
+  width: 259px;
+  height: 145px;
+}
+.teacher-card .pic img {
+  width: 100%;
+  height: 100%;
+}
+.teacher-card .intro {
+  height: 145px;
+  flex: 1;
+  background-color: white;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.teacher-card .intro .teacher-name {
+  width: 100%;
+  height: 30px;
+  border-bottom: 2px solid #ff3f29;
+  text-align: center;
+}
+.teacher-card .intro .teacher-name span {
+  font-size: 14px;
+  font-family: "微软雅黑", sans-serif;
+  line-height: 30px;
+  color: #ff3f29;
+}
+.teacher-card .intro .ti {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  padding: 5px;
+  box-sizing: border-box;
+  flex: 1;
+}
+.teacher-card .intro .ti span {
+  font-size: 16px;
+  line-height: 25px;
+}
+/*# sourceMappingURL=index.css.map */

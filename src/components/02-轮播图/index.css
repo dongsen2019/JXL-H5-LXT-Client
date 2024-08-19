@@ -1,0 +1,77 @@
+@import "../../BaseCss/base_css.css";
+.wyy-lb {
+  min-width: 1200px;
+  height: 380px;
+  background-color: tomato;
+  position: relative;
+}
+.wyy-lb .images {
+  height: 100%;
+  background-color: cyan;
+  position: relative;
+}
+.wyy-lb .images li {
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  position: absolute;
+  transition: opacity 1s linear;
+  opacity: 0;
+}
+.wyy-lb .images li.current {
+  opacity: 1;
+}
+.wyy-lb .images li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.wyy-lb .images li a img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.wyy-lb .titles {
+  width: 280px;
+  height: 274px;
+  padding: 10px 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: absolute;
+  right: calc((100% - 1200px) / 2);
+  top: 50%;
+  transform: translateY(-50%);
+  overflow-y: auto;
+}
+.wyy-lb .titles::-webkit-scrollbar {
+  display: none;
+}
+.wyy-lb .titles li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.wyy-lb .titles li.current::before,
+.wyy-lb .titles li:hover::before {
+  content: "";
+  border: 7px solid transparent;
+  border-right-color: #ff3f29;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: block;
+}
+.wyy-lb .titles li.current a,
+.wyy-lb .titles li:hover a {
+  color: #ff3f29;
+}
+.wyy-lb .titles li a {
+  font-size: 16px;
+  color: white;
+  margin-left: 25px;
+  display: block;
+}
+/*# sourceMappingURL=index.css.map */

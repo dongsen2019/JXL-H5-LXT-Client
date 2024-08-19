@@ -1,0 +1,26 @@
+@import "../../BaseCss/base_css.css";
+.news-card {
+  width: 500px;
+  line-height: 36px;
+  padding: 5px 10px;
+}
+.news-card ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.news-card ul li a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #333;
+}
+.news-card ul li a:hover {
+  color: #ff3f29;
+}
+.news-card ul li span {
+  min-width: 180px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #999;
+}
+/*# sourceMappingURL=index.css.map */
