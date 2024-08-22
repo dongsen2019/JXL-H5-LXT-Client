@@ -1,0 +1,143 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.footer {
+  height: 190px;
+  background-color: #474443;
+  .content {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    .left {
+      flex: 900;
+
+      padding: 36px 0;
+
+      height: 118px;
+
+      ul.friend-link {
+        display: flex;
+
+        &>li {
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+
+          a {
+            color: white;
+            font-size: 14px;
+          }
+        }
+      }
+
+      &>div.line-one {
+        height: 23px;
+        margin-top: 10px;
+
+        span {
+          font-size: 14px;
+          color: #999;
+
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+        }
+      }
+
+      &>div.line-two {
+        height: 23px;
+        margin-top: 10px;
+
+        span {
+          font-size: 14px;
+          color: #999;
+
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+        }
+      }
+
+      &>div.line-three {
+        height: 23px;
+        margin-top: 10px;
+
+        span {
+          font-size: 14px;
+          color: #999;
+
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+        }
+      }
+    }
+    .right {
+      flex: 242;
+
+      padding: 30px;
+
+      height: 130px;
+
+      div.apple-android {
+        width: 242px;
+        height: 32px;
+
+        display: flex;
+
+        &>.app {
+          flex: 1;
+
+          margin-left: 10px;
+
+          height: 100%;
+
+          background-image: url("../../assets/images/Android_Apple.png");
+        }
+
+        &>.android {
+          flex: 1;
+
+          margin-left: 10px;
+
+          height: 100%;
+
+          background-image: url("../../assets/images/Android_Apple.png");
+          background-position: 0 -42px;
+        }
+      }
+
+      div.gzwm {
+        height: 63px;
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+          color: white;
+          font-size: 14px;
+          line-height: 63px;
+        }
+
+        div {
+          height: 60px;
+          width: 60px;
+          //background-color: tomato;
+
+          &.wx {
+            background-position: 141px 170px;
+            background-image: url("../../assets/images/layout_css_sprites2.png");
+          }
+
+          &.wb {
+            background-position: 247px 270px;
+            background-image: url("../../assets/images/layout_css_sprites2.png");
+          }
+        }
+      }
+    }
+  }
+}
