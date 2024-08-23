@@ -1,0 +1,252 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.navbar-mini {
+  min-height: 1205px;
+  height: 60px;
+  background-image: url("../../assets/images/bg_nav_rep.png");
+  background-repeat: repeat-x;
+
+  .content {
+    height: 60px;
+    display: flex;
+
+    .left {
+      flex: 3;
+
+      display: flex;
+
+      //background-color: tomato;
+
+      .ykt-logo {
+
+        display: block;
+        width: 177px;
+        height: 60px;
+
+        background-image: url('../../assets/images/logo-mini.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+
+        h1 {
+          font-size: 0;
+        }
+      }
+
+      .menu {
+        height: 100%;
+        //background-color: tomato;
+
+        ul {
+          height: 100%;
+
+          display: flex;
+          flex-direction: row;
+
+          li {
+            width: fit-content;
+            height: 100%;
+            margin-left: 30px;
+            box-sizing: border-box;
+
+            a {
+              width: fit-content;
+              height: 100%;
+              display: block;
+
+              line-height: 60px;
+              color: white;
+              font-size: 18px;
+              font-family: "微软雅黑", sans-serif;
+            }
+
+            &.current {
+              border-bottom: 5px solid @themeColor;
+
+              a {
+                color: @themeColor;
+              }
+            }
+
+            &:hover {
+              border-bottom: 5px solid @themeColor;
+
+              a {
+                color: @themeColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .center {
+      flex: 2;
+
+      background-color: transparent;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .search-bar {
+        width: 300px;
+        height: 40px;
+        margin-left: 5px;
+        background-color: transparent;
+        border: 1px solid #999999;
+        border-radius: 6px;
+        box-sizing: border-box;
+
+        overflow: hidden;
+        display: flex;
+
+        .category {
+          height: 100%;
+
+          flex: 3;
+          select {
+            height: 38px;
+            width: 100%;
+            color: #fff;
+            padding-left: 10px;
+            background-color: #444;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+
+        .keyword {
+          height: 100%;
+          //background-color: blue;
+
+          flex: 8;
+          input {
+            width: 100%;
+            height: 100%;
+            padding:0 0 0 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            color: #fff;
+            background-color: #444;
+          }
+        }
+
+        .submit-btn {
+          height: 100%;
+          //background-color: coral;
+
+          flex: 2;
+          input {
+            width: 100%;
+            height: 100%;
+            background-color: #444;
+            border: none;
+            color:white;
+            font-size: 13.5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 2;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      div.touxiang  {
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-right: 100px;
+
+        position: relative;
+        cursor: pointer;
+
+
+        &:hover .zky {
+          display: block;
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+          vertical-align: middle;
+          border-radius: 50%;
+        }
+
+        .zky {
+          width: 175px;
+          height: 290px;
+          background-color: #ffffff;
+          border: 2px solid rgb(246,246,246);
+
+          display: none;
+
+          position: absolute;
+          top: 46px;
+          right: 0;
+          z-index: 10;
+
+          &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border: 14px solid transparent;
+            border-bottom-color: rgb(246,246,246);
+
+            display: inline-block;
+
+            position: absolute;
+            top: -28px;
+            right: 6px;
+          }
+
+          ul {
+            width: 100%;
+            height: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            &>li {
+              width: 158px;
+              height: 30px;
+              margin-left: 5px;
+              padding-left: 5px;
+
+              text-align: left;
+              line-height: 30px;
+              font-size: 12px;
+
+              &:first-child {
+                border-bottom: 1px solid #eaeaea;
+              }
+
+              &:last-child {
+                border-top: 1px solid #eaeaea;
+              }
+            }
+
+            &>li:hover {
+              background-color: rgb(243,244,246);
+            }
+          }
+        }
+      }
+    }
+  }
+}
