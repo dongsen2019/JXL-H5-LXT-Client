@@ -240,11 +240,13 @@ div#nav-bar .content .bottom .right ul li {
   width: fit-content;
   height: 100%;
   margin-left: 35px;
+  cursor: pointer;
   line-height: 44px;
   color: #AAAAAA;
   position: relative;
 }
 div#nav-bar .content .bottom .right ul li .ad-pane {
+  z-index: 998;
   width: 180px;
   height: 180px;
   background-color: white;
