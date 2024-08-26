@@ -1,0 +1,76 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.teacher-items {
+  //border: 1px solid tomato;
+  padding: 10px 15px;
+
+  .intro {
+    height: 80px;
+    border-bottom: 1px solid grey;
+
+    display: flex;
+    align-items: center;
+
+    .message {
+      flex: 1;
+
+      display: flex;
+
+      img {
+        width: 100px;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid @themeColor;
+      }
+
+      .t-profile {
+        padding: 10px 0 0 20px;
+
+        .position-name {
+          font-size: 18px;
+          color: #424242;
+
+          &.star-t::after {
+            content: "金牌讲师";
+            display: inline-block;
+            text-align: center;
+            line-height: 16px;
+
+
+            width: 56px;
+            height: 16px;
+            background-color: #ffd2af;
+            font-size: 12px;
+            color:#a5571b;
+
+            margin-left: 5px;
+            border-radius: 3px;
+          }
+        }
+      }
+
+        .class-count {
+          font-size: 12px;
+          color: #999999;
+          margin-top: 10px;
+        }
+    }
+
+    .to-detail {
+      width: 98px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      color: @themeColor;
+      border: 1px solid @themeColor;
+      border-radius: 5px;
+    }
+  }
+
+  .desc {
+    min-height: 80px;
+    line-height: 30px;
+    letter-spacing: 3px;
+  }
+}

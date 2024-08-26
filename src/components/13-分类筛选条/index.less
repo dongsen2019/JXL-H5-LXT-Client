@@ -1,0 +1,40 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.category-bar {
+  height: 40px;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
+  background-color: tomato;
+  background: linear-gradient(#f7f6f8, #fff, 20%);
+  .content {
+    height: 100%;
+    background-color: #fff;
+    dl {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      dt {
+        font-size: 14px;
+        color:#949fab;
+      }
+
+      dd {
+        margin-left: 15px;
+        font-size: 16px;
+        color:#6b6578;
+
+        line-height: 30px;
+        padding: 0 8px;
+        cursor: pointer;
+        border: 1px solid transparent;
+
+        &:hover,
+        &.selected {
+          border: 1px solid @themeColor;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
