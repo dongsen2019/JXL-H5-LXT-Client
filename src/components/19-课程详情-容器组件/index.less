@@ -1,0 +1,89 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+
+.course-detail {
+  background-color: #EEEEEE;
+
+  .content {
+    //max-width: 1205px;
+    background-color: darkcyan;
+
+    .course-top-tab {
+      height: 37px;
+
+      .tabs {
+        display: flex;
+
+        li {
+          width: 73px;
+          height: 36px;
+          text-align: center;
+
+          line-height: 37px;
+          font-size: 14px;
+          color: #FFFFFF;
+
+          cursor: pointer;
+
+          &:not(&.current):hover {
+            color: @themeColor;
+          }
+
+          &.current {
+            background-image: url("../../assets/images/coursedetailtabbg.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+        }
+      }
+    }
+
+    .course-bottom-pane {
+      width: 100%;
+      height: 400px;
+
+      display: flex;
+
+      .left {
+        flex:1;
+
+        min-width: 675px;
+        background-color: tomato;
+
+        .panes {
+          width: 100%;
+          height: 100%;
+          background-color: deeppink;
+
+          //position: relative;
+
+          li {
+            width: 100%;
+            //height: 100%;
+            background-color: lightcyan;
+
+            //position: absolute;
+            //top: 0;
+            //left: 0;
+
+            display: none;
+            &.current {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .middle {
+        width: 20px;
+        background-color: transparent;
+      }
+
+      .right {
+        width: 265px;
+        background-color: darkmagenta;
+      }
+    }
+  }
+}

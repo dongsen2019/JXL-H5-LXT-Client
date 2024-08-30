@@ -1,0 +1,61 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.c-notice {
+  max-width: 265px;
+  height: 158px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px #bbb;
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    height: 50px;
+    padding: 15px 0 15px 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #bbb;
+
+    h2 {
+      font-size: 18px;
+      color: #444444;
+      font-weight: normal;
+    }
+  }
+  .bottom {
+    flex: 1;
+    padding: 5px 15px 15px 15px;
+
+    .inner {
+      width: 235px;
+      height: 68px;
+
+      .up {
+        height: 40px;
+        font-size: 12px;
+        line-height: 20px;
+
+        overflow: hidden;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+      }
+
+      .down {
+        padding-top: 8px;
+
+        display: flex;
+        justify-content: space-between;
+
+        .date {
+          font-size: 12px;
+          color: #999;
+        }
+
+        .detail {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+    }
+  }
+}

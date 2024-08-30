@@ -1,0 +1,739 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+body {
+  background-color: #fff;
+}
+
+//mini导航条
+.navbar-mini {
+  min-width: 1205px;
+  height: 60px;
+  background-image: url("../../assets/images/bg_nav_rep.png");
+  background-repeat: repeat-x;
+
+  position: sticky;
+  top: 0;
+
+  .content {
+    height: 60px;
+    display: flex;
+
+    .left {
+      flex: 3;
+
+      display: flex;
+
+      //background-color: tomato;
+
+      .ykt-logo {
+
+        display: block;
+        width: 177px;
+        height: 60px;
+
+        background-image: url('../../assets/images/logo-mini.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+
+        h1 {
+          font-size: 0;
+        }
+      }
+
+      .menu {
+        height: 100%;
+        //background-color: tomato;
+
+        ul {
+          height: 100%;
+
+          display: flex;
+          flex-direction: row;
+
+          li {
+            width: fit-content;
+            height: 100%;
+            margin-left: 30px;
+            box-sizing: border-box;
+
+            a {
+              width: fit-content;
+              height: 100%;
+              display: block;
+
+              line-height: 60px;
+              color: white;
+              font-size: 18px;
+              font-family: "微软雅黑", sans-serif;
+            }
+
+            &.current {
+              border-bottom: 5px solid @themeColor;
+
+              a {
+                color: @themeColor;
+              }
+            }
+
+            &:hover {
+              border-bottom: 5px solid @themeColor;
+
+              a {
+                color: @themeColor;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .center {
+      flex: 2;
+
+      background-color: transparent;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .search-bar {
+        width: 300px;
+        height: 40px;
+        margin-left: 5px;
+        background-color: transparent;
+        border: 1px solid #999999;
+        border-radius: 6px;
+        box-sizing: border-box;
+
+        overflow: hidden;
+        display: flex;
+
+        .category {
+          height: 100%;
+
+          flex: 3;
+          select {
+            height: 38px;
+            width: 100%;
+            color: #fff;
+            padding-left: 10px;
+            background-color: #444;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+
+        .keyword {
+          height: 100%;
+          //background-color: blue;
+
+          flex: 8;
+          input {
+            width: 100%;
+            height: 100%;
+            padding:0 0 0 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            color: #fff;
+            background-color: #444;
+          }
+        }
+
+        .submit-btn {
+          height: 100%;
+          //background-color: coral;
+
+          flex: 2;
+          input {
+            width: 100%;
+            height: 100%;
+            background-color: #444;
+            border: none;
+            color:white;
+            font-size: 13.5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 2;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      div.touxiang  {
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-right: 100px;
+
+        position: relative;
+        cursor: pointer;
+
+
+        &:hover .zky {
+          display: block;
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+          vertical-align: middle;
+          border-radius: 50%;
+        }
+
+        .zky {
+          width: 175px;
+          height: 290px;
+          background-color: #ffffff;
+          border: 2px solid rgb(246,246,246);
+
+          display: none;
+
+          position: absolute;
+          top: 46px;
+          right: 0;
+          z-index: 10;
+
+          &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border: 14px solid transparent;
+            border-bottom-color: rgb(246,246,246);
+
+            display: inline-block;
+
+            position: absolute;
+            top: -28px;
+            right: 6px;
+          }
+
+          ul {
+            width: 100%;
+            height: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            &>li {
+              width: 158px;
+              height: 30px;
+              margin-left: 5px;
+              padding-left: 5px;
+
+              text-align: left;
+              line-height: 30px;
+              font-size: 12px;
+
+              &:first-child {
+                border-bottom: 1px solid #eaeaea;
+              }
+
+              &:last-child {
+                border-top: 1px solid #eaeaea;
+              }
+            }
+
+            &>li:hover {
+              background-color: rgb(243,244,246);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//讲师介绍页面
+.teacher-intro {
+  min-width: 1205px;
+  height: 190px;
+
+  background-image: url("../../assets/images/teacher_back.png");
+  background-position: top center;
+
+  .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .t-header {
+      width: 90px;
+      height: 90px;
+      border: 4px solid hsla(0,0%,98%,0.6);
+      box-shadow: 0 1px 3px #999;
+    }
+
+    .intro-pane {
+      height: 90px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      margin-left: 20px;
+
+      .t-position-name {
+        font-size: 20px;
+        font-weight: bolder;
+        color: #ffffff;
+
+        &.is-star::after {
+          content: "";
+          display: inline-block;
+          width: 18px;
+          height: 14px;
+
+          background-image: url("../../assets/images/star-teacher.png");
+          background-position: 0 0;
+        }
+      }
+
+      .desc {
+        font-size: 14px;
+        font-weight: bolder;
+        color: #ffffff;
+      }
+    }
+
+  }
+}
+
+//章节提示
+.section-notice {
+  min-width: 1205px;
+  height: 60px;
+  background-color: #fff;
+
+
+  .content {
+    height: 100%;
+
+    .menu {
+      height: 100%;
+      //background-color: tomato;
+
+      ul {
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        li {
+          width: fit-content;
+          height: 100%;
+          margin-left: 30px;
+          box-sizing: border-box;
+
+          a {
+            width: fit-content;
+            height: 100%;
+            display: block;
+
+            line-height: 60px;
+            color: white;
+            font-size: 18px;
+            font-family: "微软雅黑", sans-serif;
+          }
+
+          &.current {
+            border-bottom: 5px solid @themeColor;
+
+            a {
+              color: @themeColor;
+            }
+          }
+
+          &:hover {
+            border-bottom: 5px solid @themeColor;
+
+            a {
+              color: @themeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//课程列表
+.course-list {
+  padding-top: 30px;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 10px;
+
+    .card {
+      width: 225px;
+      height: 263px;
+
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .image {
+        width: 100%;
+        height: 124px;
+
+        overflow: hidden;
+
+
+        a {
+          width: 100%;
+          height: 100%;
+
+          display: block;
+
+          img {
+            width: 100%;
+            height: 100%;
+
+            transition: all 333ms ease-in-out;
+
+            &:hover {
+              transform: scale(1.14);
+            }
+          }
+        }
+      }
+
+      .title {
+        width: 100%;
+        background-color: #ffffff;
+
+        flex: 2;
+
+        a {
+          width: 100%;
+          height: 100%;
+
+          display: block;
+
+          span {
+            display: block;
+            width: 205px;
+            height: 40px;
+            margin-top: 8px;
+            margin-bottom: 14px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            font-size: 13px;
+            font-family: "微软雅黑", sans-serif;
+            color: black;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .score {
+        width: 100%;
+        background-color: #ffffff;
+
+        flex: 1;
+
+        .ss {
+          width: 100px;
+          height: 15px;
+          margin-left: 10px;
+
+          display: flex;
+
+          .star {
+            width: 80px;
+            height: 12px;
+            background-color: #fff;
+            margin-top: 1.5px;
+
+            display: inline-block;
+
+            span {
+              display:inline-block;
+              //display: block;
+
+              width: 12px;
+              height: 12px;
+              margin-right: 3px;
+              //inline-block的元素要使其和外部的div顶部对齐,需要设置
+              vertical-align: top;
+            }
+          }
+          span {
+            font-size: 12px;
+            line-height: 15px;
+
+            display: inline-block;
+          }
+        }
+      }
+
+      .zan {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        flex: 2;
+
+        span {
+          font-size: 14px;
+          font-weight: bolder;
+          display: inline-block;
+          margin-top: 4px;
+
+          &::before {
+            content: "¥";
+          }
+        }
+      }
+    }
+
+    // 额外定义一些特殊的类名,给使用组件容器的开发人员来使用
+    // 类名 -> 各个卡片组件上面
+    //自动的给他分配控件,以及调整间距
+
+    .column5 {
+      width: ~"calc((100% - 30px * 4) / 5)";
+      margin-bottom: 30px;
+
+      &:not(&:nth-child(5n+1)) {
+        margin-left: 30px;
+      }
+    }
+
+    .column3 {
+      width: ~"calc((100% - 30px * 2) / 3)";
+      margin-bottom: 30px;
+
+      &:not(&:nth-child(3n+1)) {
+        margin-left: 30px;
+      }
+    }
+
+    .column2 {
+      width: ~"calc((100% - 30px * 1) / 2)";
+      margin-bottom: 30px;
+
+      &:not(&:nth-child(2n+1)) {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+//底部
+.footer {
+  height: 190px;
+  background-color: #474443;
+  margin-top: 50px;
+
+  .content {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    .left {
+      flex: 900;
+
+      padding: 36px 0;
+
+      height: 118px;
+
+      ul.friend-link {
+        display: flex;
+
+        &>li {
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+
+          a {
+            color: white;
+            font-size: 14px;
+          }
+        }
+      }
+
+      &>div.line-one {
+        height: 23px;
+        margin-top: 10px;
+
+        span {
+          font-size: 14px;
+          color: #999;
+
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+        }
+      }
+
+      &>div.line-two {
+        height: 23px;
+        margin-top: 10px;
+
+        span {
+          font-size: 14px;
+          color: #999;
+
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+        }
+      }
+
+      &>div.line-three {
+        height: 23px;
+        margin-top: 10px;
+
+        span {
+          font-size: 14px;
+          color: #999;
+
+          &:not(:first-child) {
+            margin-left: 17px;
+          }
+        }
+      }
+    }
+    .right {
+      flex: 242;
+
+      padding: 30px;
+
+      height: 130px;
+
+      div.apple-android {
+        width: 242px;
+        height: 32px;
+
+        display: flex;
+
+        &>.app {
+          flex: 1;
+
+          margin-left: 10px;
+
+          height: 100%;
+
+          background-image: url("../../assets/images/Android_Apple.png");
+        }
+
+        &>.android {
+          flex: 1;
+
+          margin-left: 10px;
+
+          height: 100%;
+
+          background-image: url("../../assets/images/Android_Apple.png");
+          background-position: 0 -42px;
+        }
+      }
+
+      div.gzwm {
+        height: 63px;
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+          color: white;
+          font-size: 14px;
+          line-height: 63px;
+        }
+
+        div {
+          height: 60px;
+          width: 60px;
+          //background-color: tomato;
+
+          &.wx {
+            background-position: 141px 170px;
+            background-image: url("../../assets/images/layout_css_sprites2.png");
+          }
+
+          &.wb {
+            background-position: 247px 270px;
+            background-image: url("../../assets/images/layout_css_sprites2.png");
+          }
+        }
+      }
+    }
+  }
+}
+
+//固定导航栏
+.fixed-contact {
+  width: 64px;
+  height: 212px;
+  background-color: white;
+
+  padding: 24px 0;
+
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 32px;
+
+  .contact-kf,
+  .phone-kt,
+  .to-top {
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    cursor: pointer;
+
+    position: relative;
+
+    img {
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    p {
+      font-size: 12px;
+      text-align: center;
+
+
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .contact-kf {
+    margin-top: 12px;
+  }
+}

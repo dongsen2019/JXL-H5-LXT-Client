@@ -1,0 +1,56 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.teacher-intro {
+  min-width: 1205px;
+  height: 190px;
+
+  background-image: url("../../assets/images/teacher_back.png");
+  background-position: top center;
+
+  .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .t-header {
+      width: 90px;
+      height: 90px;
+      border: 4px solid hsla(0,0%,98%,0.6);
+      box-shadow: 0 1px 3px #999;
+    }
+
+    .intro-pane {
+      height: 90px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      margin-left: 20px;
+
+      .t-position-name {
+        font-size: 20px;
+        font-weight: bolder;
+        color: #ffffff;
+
+        &.is-star::after {
+          content: "";
+          display: inline-block;
+          width: 18px;
+          height: 14px;
+
+          background-image: url("../../assets/images/star-teacher.png");
+          background-position: 0 0;
+        }
+      }
+
+      .desc {
+        font-size: 14px;
+        font-weight: bolder;
+        color: #ffffff;
+      }
+    }
+
+  }
+}

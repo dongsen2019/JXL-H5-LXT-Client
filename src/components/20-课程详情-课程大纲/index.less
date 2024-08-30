@@ -1,0 +1,105 @@
+@import "../../BaseCss/base_css.css";
+@import "../../config/color.less";
+
+.course-dg {
+  background-color: #FFFFFF;
+  //height: 200px;
+
+  &.no-view {
+    .c-view {
+      display: none;
+    }
+  }
+
+  .dg {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: #b4b7be;
+
+      position: absolute;
+      top: 0;
+      left: 99px;
+    }
+
+    li {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(255, 63, 41, 0.1);
+      }
+
+      .c-num {
+        width: 60px;
+        height: 38px;
+        line-height: 38px;
+        color: #b4b7be;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .c-progress {
+        width: 19px;
+        height: 19px;
+        background-color: #fff;
+        z-index: 99;
+
+        background-image: url("../../assets/images/listIcons.png");
+        background-position: -136px -80px;
+        //background-position: -200px -80px;
+
+        &.finished {
+          background-position: -200px -80px;
+        }
+
+        &.part-finished {
+          background-position: -168px -80px;
+        }
+      }
+
+      .c-title {
+        flex: 1;
+
+        line-height: 38px;
+        color: #585c67;
+        font-size: 14px;
+        padding-left: 8px;
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .c-view {
+        //display: block; 当祖先元素设置no-view时,这个属性会覆盖掉,flex布局无视显示模式
+
+        width: 90px;
+        height: 34px;
+        line-height: 34px;
+        color: #FFFFFF;
+        font-size: 12px;
+
+        text-align: center;
+        cursor: pointer;
+
+        background-color: @themeColor;
+        background-image: url("../../assets/images/button.png");
+        background-position: -40px -100px;
+
+        &:hover {
+          background-color: @themeColor;
+          background-image: url("../../assets/images/button.png");
+          background-position: -40px -49px;
+        }
+      }
+    }
+  }
+}
